@@ -1,0 +1,64 @@
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintStream;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+
+public class Server2 {
+
+	public static void main(String[] args) {
+		ServerSocket srv=null;
+		Socket client=null;
+		InputStream is=null;
+		OutputStream os=null;
+		DataInputStream dis=null;
+		DataOutputStream dos=null;
+		String instr1,outstr1;
+		
+		try {
+			System.out.println("tcp server haver started...");
+			srv=new ServerSocket(2345);
+			client=srv.accept();//阻塞点
+			is=client.getInputStream();
+			os=client.getOutputStream();
+			dis=new DataInputStream(is);
+			dos=new DataOutputStream(os);
+			instr1=dis.readUTF();//读client发来的数据
+			if("1233211234567".equals(instr1)){
+				outstr1="welcome";
+			}else{
+				outstr1="goodbye";
+			}
+			dos.writeUTF(outstr1);
+			
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}finally{
+			try {
+				dis.close();
+				dos.close();
+				os.close();
+				is.close();							
+				client.close();
+				srv.close();
+			} catch (IOException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
+		
+				
+		
+		
+	}
+
+}

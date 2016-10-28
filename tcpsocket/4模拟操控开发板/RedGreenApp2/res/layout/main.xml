@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/txtTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="欢迎使用仲恺自动化系统主控界面"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="操作列表:"
+            android:textSize="16sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <EditText
+            android:id="@+id/editIp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           
+            android:ems="10"
+            android:text="192.168.16.72"
+            
+             >
+
+            <requestFocus />
+        </EditText>
+
+        <Button
+            android:id="@+id/btnSetting"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="设置ip" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btnConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="连接开发板" />
+
+        <TextView
+            android:id="@+id/txtConnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="gone"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btnDisconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="断开开发板" 
+            android:enabled="false"
+            
+            />
+
+        <TextView
+            android:id="@+id/txtDisconnect"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:visibility="gone"
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btnLedOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LED开" 
+            android:enabled="false"
+            
+            />
+
+        <Button
+            android:id="@+id/btnLedOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:enabled="false"
+            android:text="LED关" />
+
+        <ImageView
+            android:id="@+id/imgLed"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:src="@drawable/led_off" 
+            android:visibility="gone"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <Button
+            android:id="@+id/btnBeepOn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PWM开" 
+            android:enabled="false"
+            
+            />
+
+        <Button
+            android:id="@+id/btnBeepOff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PWM关"
+            android:enabled="false"
+            
+             />
+
+        <TextView
+            android:id="@+id/txtBeep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="蜂鸣器关"
+            android:textSize="18sp"
+            android:visibility="gone"
+            
+             />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+    </LinearLayout>
+
+</LinearLayout>
